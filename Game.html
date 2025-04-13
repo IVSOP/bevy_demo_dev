@@ -6,9 +6,9 @@
  <body>
      <h1>My WebAssembly App</h1>
      <script type="module">
-         import init from 'wasm/idk.js';
+         import init from './wasm/idk.js';
          async function run() {
-             await init('../wasm/idk_bg.wasm');
+             await init('./wasm/idk_bg.wasm');
              // Call exported WASM functions if needed, e.g.:
              // const { someFunction } = await import('./wasm/your_module.js');
              // someFunction();
