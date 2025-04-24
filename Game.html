@@ -1,31 +1,3 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Bevy demo</title>
-  <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/hljs/github-dark.min.css">
-  <link rel="stylesheet" href="styles/index.css">
-</head>
-<body>
-<table class="header">
-  <tbody><tr>
-    <td rowspan="2" class="width-auto">
-      <h1 class="title">Bevy demo</h1>
-      <span class="subtitle">About</span>
-    </td>
-	<td>
-		<a href="index">Main page</a>
-	</td>
-  </tr>
-  <tr>
-    <td class="width-min">
-		<span style="white-space: pre;">Updated: 4/2025</span>
-	</td>
-  </tr>
-</tbody></table>
-<p>THIS IS UNUSED FOR NOW</p>
-<p>This might take a while to load</p>
 <!-- <!DOCTYPE html> -->
 <!-- <html lang="en"> -->
 <!-- <head> -->
@@ -44,39 +16,34 @@
 <!-- </body> -->
 <!-- </html> -->
 <!---->
-<!--  <!DOCTYPE html> -->
-<!--  <html> -->
-<!--  <head> -->
-<!--      <title>WASM Demo</title> -->
-<!--  </head> -->
-<!--  <body> -->
-<!--      <h1>My WebAssembly App</h1> -->
-<!--      <script type="module"> -->
-<!--          import init from './wasm/idk.js'; -->
-<!--          async function run() { -->
-<!--              await init('../wasm/idk_bg.wasm'); -->
-<!--              // Call exported WASM functions if needed, e.g.: -->
-<!--              // const { someFunction } = await import('./wasm/your_module.js'); -->
-<!--              // someFunction(); -->
-<!--          } -->
-<!--          run(); -->
-<!--      </script> -->
-<!--  </body> -->
-<!--  </html> -->
-<script type="module">
-import init from './wasm/idk.js';
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title>WASM Demo</title>
+ </head>
+ <body>
+     <h1>My WebAssembly App</h1>
+     <script type="module">
+        import init from './wasm/bevy_tech_demo.js';
+        async function run() {
+            //  await init('../wasm/idk_bg.wasm');
+            // this is cursed but caused so many issues so I just dont care
+            await init('/bevy_demo_dev/wasm/bevy_tech_demo_bg.wasm');
+            // const { someFunction } = await import('./wasm/your_module.js');
+            // someFunction();
+            }
+        run();
+     </script>
+ </body>
+ </html>
+
+<!-- <script type="module">
+import init from './wasm/bevy_tech_demo.js';
 async function run() {
-await init('../wasm/idk_bg.wasm');
-// Call exported WASM functions if needed, e.g.:
+// this is cursed but caused so many issues so I just dont care
+await init('/bevy_demo_dev/wasm/bevy_tech_demo_bg.wasm');
 // const { someFunction } = await import('./wasm/your_module.js');
 // someFunction();
 }
 run();
-</script>
-  <div class="debug-grid"></div>
-  <script src="scripts/index.js"></script>
-
-<footer>
-</footer>
-
-</body></html>
+</script> -->
